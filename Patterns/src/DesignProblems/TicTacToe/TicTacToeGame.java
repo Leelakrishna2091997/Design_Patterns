@@ -2,22 +2,22 @@ package DesignProblems.TicTacToe;
 
 import java.util.List;
 
-class Piece {
+class GamePiece {
   Symbol icon;
-  Piece(Symbol icon) {
+  GamePiece(Symbol icon) {
     this.icon = icon;
   }
 }
 
-class PieceX extends Piece {
-  PieceX() {
+class GamePieceX extends GamePiece {
+  GamePieceX() {
     super(Symbol.X);
   }
 }
 
 
-class PieceO extends Piece {
-  PieceO() {
+class GamePieceO extends GamePiece {
+  GamePieceO() {
     super(Symbol.O);
   }
 }
@@ -33,7 +33,7 @@ class Player {
 
   List<int[]> myMoves;
 
-  Piece mySymbol;
+  GamePiece mySymbol;
 
   void addMove(int[] move) {myMoves.add(move);
   }
@@ -50,10 +50,10 @@ class PlayerO extends Player {
 class Board {
 
   int size;
-  Piece[][] boardState;
+  GamePiece[][] boardState;
 
   Board( int size) {
-    boardState = new Piece[size][size];
+    boardState = new GamePiece[size][size];
   }
 
   // add move

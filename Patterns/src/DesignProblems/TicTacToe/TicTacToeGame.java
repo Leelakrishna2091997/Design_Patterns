@@ -1,13 +1,13 @@
 package DesignProblems.TicTacToe;
 
 import java.util.List;
-
 class GamePiece {
   Symbol icon;
   GamePiece(Symbol icon) {
     this.icon = icon;
   }
 }
+
 
 class GamePieceX extends GamePiece {
   GamePieceX() {
@@ -77,12 +77,44 @@ class Game {
   Board currentBoard;
   List<Player> currentPlayers;
 
+//  private boolean isGameOver() {
+//
+//    for(int j = 0; j < 3; j++) {
+//      int sum = 0;
+//      int colSum = 0;
+//      for (int i = 0; i < 3; i++) {
+//        sum += val[j][i];
+//        colSum += val[i][j];
+//      }
+//
+////      if(sum == 3 || sum == -3 || colSum == 3 || colSum == -3) game done
+//
+//      diagonal
+//
+////          0 0
+////      i+1 c+1
+//
+////      i = 0 j = 2
+////        r+1 c-1
+////      till r < n && c >= 0
+//    }
+//    // check if any row has 3
+//    // check if any col has 3
+//    // check if any diagonal or anti-diagonal has 3
+//
+//    // if total no of moves equals to total board size
+//    return false;
+//
+//  }
+
   void startGame() {
 
     int index = 0;
 
     // request input from player till game is not completed
     while(true) {
+
+//      if(isGameOver()) return getWinner();
 
       int currentPlayerIndex = index % currentPlayers.size();
 
